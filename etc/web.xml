@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "">
+<!--
+    Document   : web.xml
+    Created on : 6 de Fevereiro de 2005, 01:39
+    Author     : helder
+    Description:
+        Purpose of the document follows.
+-->
+<web-app>
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <description>Servlet for prototype testing purposes only</description>
+    <servlet-class>argonavis.quizzy.web.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+</web-app>
+

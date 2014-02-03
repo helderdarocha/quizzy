@@ -1,0 +1,18 @@
+Quizzy
+
+Objective:
+Provide a quiz creation and publishing environment.
+
+Description:
+The application's goal is to publish a quiz, which is an object that consists of an ID, a title, a Description object, a time to complete and zero or more questions. A Description object may consist of text, HTML text and/or images. A quiz can be active if it has at least one question. Active quizzes can be published. Questions are identified by a number.
+Questions have an identification number, a subject, a question Description, a solution Description and an Answer object. An Answer object may be of two types: a MultipleAlternativeAnswer, a SingleAlternativeAnswer or a TextAnswer. Any Answer object has a flag which indicates if it is correct or not. The flag may be set manually for the TextAnswer. The flag is set automatically for Alternative based answers. An Alternative has an ID, text and a flag which indicates if it is correct or not in the context of an answer.
+
+The application must have an administration interface that will allow any person to write questions, alternatives, and build quizzes consisting of groups of questions. Alternatives can be created in isolation for reuse among several questions, but each alternative is a separate object, even if it contains the same text. Alternatives are exclusive to each question. An alternative question is composed of alternatives. The administrator may create a new Question based on an existing Question. Quizzes can only be created with existing questions. Questions are added to quizzes. The administrator may publish the quiz when he is done.
+
+Published quizzes may be accessed via a Web interface. The quiz's ID number can be used to link it to a control application, student IDs and so on. This version does not cover these issues.
+
+The application should be written in Java. The persistence layer should be isolated. It should be possible to import and export questions to a XML format, to a database, to a text format. The user interface should be isolated. It should be possible to offer a swing based interface, a text based interface and a Web interface for the same applications. 
+
+User documentation is necessary. For maintenance, development documentation such as UML diagrams, JUnit tests are necessary.
+
+An experimental version should be available by January 20.

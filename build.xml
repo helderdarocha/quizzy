@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<project name="quizzy" default="run-tests">
+	
+	<path id="dep.path">
+	   <fileset dir="lib">
+		  <include name="*.jar" />
+	   </fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="classes">
+			<classpath refid="dep.path"></classpath>
+		</javac>
+	</target>
+	
+	<target name="run-tests" depends="compile">
+		<java classname="junit.swingui.TestRunner" fork="true">
+			<arg line="argonavis.quizzy.AllTests" />
+			<classpath refid="dep.path"></classpath>
+			<classpath path="classes"></classpath>
+		</java>
+	</target>
+	
+	<target name="clean">
+		<delete dir="classes"></delete>
+	</target>
+	
+</project>
